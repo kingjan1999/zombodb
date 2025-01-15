@@ -37,6 +37,8 @@ RUN apt-get update && apt-get install -y postgresql-12 postgresql-server-dev-12
 RUN apt-get update && apt-get install -y postgresql-13 postgresql-server-dev-13
 RUN apt-get update && apt-get install -y postgresql-14 postgresql-server-dev-14
 RUN apt-get update && apt-get install -y postgresql-15 postgresql-server-dev-15
+RUN apt-get update && apt-get install -y postgresql-16 postgresql-server-dev-16
+RUN apt-get update && apt-get install -y postgresql-17 postgresql-server-dev-17
 RUN apt-get update && apt-get install -y ruby ruby-dev rubygems build-essential
 RUN gem install dotenv -v 2.8.1
 RUN gem install --no-document fpm
@@ -52,4 +54,6 @@ RUN cargo pgrx init \
 	--pg12=/usr/lib/postgresql/12/bin/pg_config \
 	--pg13=/usr/lib/postgresql/13/bin/pg_config \
 	--pg14=/usr/lib/postgresql/14/bin/pg_config \
-	--pg15=/usr/lib/postgresql/15/bin/pg_config
+	--pg15=/usr/lib/postgresql/15/bin/pg_config \
+	--pg16=/usr/lib/postgresql/16/bin/pg_config \
+	--pg17=/usr/lib/postgresql/17/bin/pg_config

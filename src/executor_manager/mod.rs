@@ -164,7 +164,7 @@ impl QueryState {
                 let var = PgBox::from_pg(first_arg as *mut pg_sys::Var);
                 #[cfg(any(feature = "pg12"))]
                 let rentry = pg_sys::rt_fetch(var.varnoold, rtable);
-                #[cfg(any(feature = "pg13", feature = "pg14", feature = "pg15"))]
+                #[cfg(any(feature = "pg13", feature = "pg14", feature = "pg15", feature = "pg16", feature = "pg17"))]
                 let rentry = pg_sys::rt_fetch(
                     if var.varnosyn != 0 {
                         var.varnosyn

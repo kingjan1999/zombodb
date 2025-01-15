@@ -78,10 +78,10 @@ These limitations may be addressed in future versions of ZomboDB.
 
 ## System Requirements
 
-| Product       | Version                      |
-| ------------- |------------------------------|
-| Postgres      | 12.x, 13.x, 14.x, 15.x       |
-| Elasticsearch | >=7.10                       |
+| Product       | Version                             |
+| ------------- |-------------------------------------|
+| Postgres      | 12.x, 13.x, 14.x, 15.x , 16.x, 17.x |
+| Elasticsearch | >=7.10                              |
 
 ## Sponsorship and Downloads
 

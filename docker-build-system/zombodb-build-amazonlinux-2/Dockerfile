@@ -64,6 +64,8 @@ RUN yum install -y postgresql12 postgresql12-server postgresql12-devel
 RUN yum install -y postgresql13 postgresql13-server postgresql13-devel
 RUN yum install -y postgresql14 postgresql14-server postgresql14-devel
 RUN yum install -y postgresql15 postgresql15-server postgresql15-devel
+RUN yum install -y postgresql16 postgresql16-server postgresql16-devel
+RUN yum install -y postgresql17 postgresql17-server postgresql17-devel
 
 USER ${UID}:${GID}
 WORKDIR /home/${USER}
@@ -86,4 +88,6 @@ RUN cargo pgrx init \
 	--pg12=/usr/pgsql-12/bin/pg_config \
 	--pg13=/usr/pgsql-13/bin/pg_config \
 	--pg14=/usr/pgsql-14/bin/pg_config \
-	--pg15=/usr/pgsql-15/bin/pg_config
+	--pg15=/usr/pgsql-15/bin/pg_config \
+	--pg16=/usr/pgsql-16/bin/pg_config \
+	--pg17=/usr/pgsql-17/bin/pg_config

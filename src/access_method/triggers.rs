@@ -146,7 +146,7 @@ unsafe fn maybe_find_hot_root(
             &mut buf,
         );
 
-        #[cfg(any(feature = "pg15"))]
+        #[cfg(any(feature = "pg15", feature = "pg16", feature = "pg17"))]
         let found_tuple = pg_sys::heap_fetch(
             (*trigdata).tg_relation,
             pg_sys::GetTransactionSnapshot(),

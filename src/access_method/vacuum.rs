@@ -35,7 +35,7 @@ pub extern "C" fn ambulkdelete(
             )
         }
 
-        #[cfg(any(feature = "pg14", feature = "pg15"))]
+        #[cfg(any(feature = "pg14", feature = "pg15", feature = "pg16", feature = "pg17"))]
         unsafe {
             pg_sys::GetOldestNonRemovableTransactionId(std::ptr::null_mut())
             // let mut limit_xid = 0;
