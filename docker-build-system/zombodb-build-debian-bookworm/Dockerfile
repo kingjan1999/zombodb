@@ -13,7 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-FROM debian:bookworm
+# FROM debian:bookworm
+FROM rust:1-bookworm
 
 LABEL maintainer="ZomboDB, LLC (zombodb@gmail.com)"
 
@@ -46,10 +47,10 @@ RUN gem install --no-document fpm
 
 USER ${UID}:${GID}
 WORKDIR /home/${USER}
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | bash -s -- -y
-ENV PATH="/home/${USER}/.cargo/bin:${PATH}"
+#RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | bash -s -- -y
+#ENV PATH="/home/${USER}/.cargo/bin:${PATH}"
 
-RUN cargo install cargo-pgrx
+RUN cargo install cargo-pgrx --version "0.12.9" --locked
 RUN cargo pgrx init \
 	--pg12=/usr/lib/postgresql/12/bin/pg_config \
 	--pg13=/usr/lib/postgresql/13/bin/pg_config \
