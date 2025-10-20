@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 ARG PGVER
-FROM postgres:${PGVER}-alpine
+FROM postgres:${PGVER}-alpine3.21
 
 LABEL maintainer="ZomboDB, LLC (zombodb@gmail.com)"
 
@@ -32,7 +32,7 @@ RUN apk add --no-cache \
 	curl \
 	bash \
 	ruby-dev \
-	ruby-etc \
+#	ruby-etc \
 	musl-dev \
 	make \
 	gcc \
